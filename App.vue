@@ -1,21 +1,30 @@
-import todo-input from './src/components/TodoInput'
-
 <template>
   <view class="container">
-    <text class="welcome">Vue Nativeへようこそ</text>
+    <view class="main">
+      <text-input />
+    </view>
   </view>
 </template>
- 
+
+<script>
+  import TextInput from './src/TodoInput';
+  export default {
+    components: {
+      TextInput
+    }
+  }
+</script>
+
 <style>
 .container {
   background-color: #333;
-  align-items: center;
-  justify-content: center;
   flex: 1;
+  padding-top: 40px;
+  align-items: center;
 }
-.welcome {
-  color: white;
-  font-size: 20px;
-  margin: 20px;
+.main {
+  flex: 1;
+  max-width: 400px;
+  align-items: center;
 }
 </style>
