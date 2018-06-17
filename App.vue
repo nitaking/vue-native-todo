@@ -1,7 +1,9 @@
 <template>
   <view class="container">
     <view class="main">
-      <text-input />
+      <text-input
+        :on-add='_onPress'
+      />
     </view>
   </view>
 </template>
@@ -11,6 +13,11 @@
   export default {
     components: {
       TextInput
+    },
+    methods: {
+      _onPress : (text) => {
+        console.log(text);
+      },
     }
   }
 </script>
