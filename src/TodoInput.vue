@@ -1,7 +1,7 @@
 <template>
     <view class="container">
-        <text-input class="text-input" />
-        <touchable-opacity class="button">
+        <text-input class="text-input" v-model="newText" />
+        <touchable-opacity class="button" :on-press="addTodo">
             <text class="button-text">追加</text>
         </touchable-opacity>
     </view>
@@ -10,6 +10,14 @@
 <script>
     export default {
         name: 'text-inputs',
+        props: {
+            onAdd: Function
+        },
+        methods: {
+          addTodo: function() {
+            this.onAdd(this.newText)
+          },
+        }
     }
 </script>
 
