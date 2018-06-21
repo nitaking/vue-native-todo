@@ -15,7 +15,8 @@
         },
         methods: {
           addTodo: function() {
-            this.onAdd(this.newText)
+            this.onAdd(this.newText);
+            console.log("addTodo",this.newText);
           },
         }
     }
